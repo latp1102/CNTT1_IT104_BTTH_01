@@ -139,7 +139,7 @@ class Store {
             if (!product) {
                 return null;
             }
-            product.sell(pq.quantity)
+            product.sell(pq.quantity);
             orderProducts.push({ product, quantity: pq.quantity });
         }
         const order = new Order(this.orderIdCounter++, customer, orderProducts);
@@ -293,3 +293,4 @@ do {
     }
 
 } while (choice !== 12);
+

@@ -104,11 +104,7 @@ class Order {
     }
 
     getDetails(): string {
-    const customerInfo = this.customer.getDetails();
-    const productsInfo = this.products.map(
-        p => `${p.product.name} x${p.quantity}`
-    ).join(", ");
-    return `orderId: ${this.orderId} - ${customerInfo} - Sản phẩm: ${productsInfo} - Tổng: ${this.totalAmount}`;
+    return `orderId: ${this.orderId} - ${this.customer} - Sản phẩm: ${this.products} - Tổng: ${this.totalAmount}`;
 }
 
 }
@@ -295,4 +291,5 @@ do {
             console.log("lựa chọn ko hơp lệ");
             break;
     }
+
 } while (choice !== 12);
